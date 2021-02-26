@@ -66,6 +66,7 @@ class UserController extends Controller
                 'phoneNumber' => $request->phoneNumber,
                 'city' => $request->city,
                 'password' => Hash::make($request->password),
+                'current_team_id' => $request->current_team_id
             ]);
 
             $user = User::where('email', $request->email)->first();
